@@ -28,6 +28,12 @@ def parse_fraction(frac_str):
     else:
         raise ValueError("Invalid fraction format")
 
+# Euclidean algorithm
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
 if len(sys.argv) > 1:
     operand = sys.argv[3]
     num1 = sys.argv[2]
